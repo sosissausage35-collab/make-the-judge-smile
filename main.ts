@@ -20,7 +20,7 @@ if (!/[A-Za-z]/.test(trimmed)) {
 }
 console.log(`Gate passed: ${trimmed.length} chars, single line`);
 
-const outPath = join(dirname(fileURLToPath(import.meta.url)), "output", "entry.txt");
-mkdirSync(dirname(outPath), { recursive: true });
+mkdirSync("/output", { recursive: true });
+const outPath = "/output/entry.txt";
 writeFileSync(outPath, line + "\n", "utf8");
 console.log(`Wrote ${line.length} chars to ${outPath}`);
